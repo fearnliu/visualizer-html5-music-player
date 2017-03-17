@@ -1,0 +1,159 @@
+
+.front-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+
+    font-size: 1em;
+}
+
+.needle-device {
+    position: relative;
+    z-index: 1001;
+
+    transition: transform 1s;
+}
+
+.fix-needle {
+    position: relative;
+
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+    border: .8em solid #f0f0f0;
+
+    background-color: transparent;
+}
+
+.needle-item {
+    position: absolute;
+    top: 100%;
+    right: 40%;
+
+    width: 4em;
+    height: 20vh;
+    border-right: .5em solid #f0f0f0;
+    border-bottom: .5em solid #f0f0f0;
+    border-bottom-right-radius: 130% 60%;
+}
+
+.needle-item::before {
+    content: "";
+
+    position: absolute;
+    right: 100%;
+    top: calc(100% - .5em);
+
+    width: 2em;
+    height: 1.5em;
+    border-radius: 10%;
+
+    background-color: #606060;
+}
+
+.outerRing {
+    align-self: center;
+    padding: 1em;
+    border-radius: 100%;
+    border: .3em solid #f0f0f0;
+
+    transform: rotate(36deg);
+
+    transition: animation .5s;
+
+    animation-name: rotating;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.innerRing {
+    align-items: center;
+    justify-content: center;
+
+    width: 8em;
+    height: 8em;
+    padding: 1.5em;
+    border: 3em solid #f0f0f0;
+    border-radius: 100%;
+    border-left-color: #202020;
+    border-right-color: #202020;
+
+    background-clip: content-box;
+    background-color: #d00000;
+}
+
+.innerRing::before {
+    content: "";
+    z-index: 1001;
+
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+
+    background-color: #202020;
+}
+
+
+.progress-bar {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: .3em;
+}
+
+.progress-pilot {
+    width: 100%;
+    height: 100%;
+    transition: all .1s;
+}
+
+
+.control-panel-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    padding-bottom: 2em;
+    box-sizing: border-box;
+
+    font-size: 1em;
+}
+
+.control-panel-button {
+    width: 4em;
+    height: 4em;
+
+    transition: background .3s;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back-button {
+    background-image: url("../assets/images/back.png");
+}
+
+.play-button {
+    background-image: url("../assets/images/play.png");
+}
+
+.pause-button {
+    background-image: url("../assets/images/pause.png");
+}
+
+.next-button {
+    background-image: url("../assets/images/next.png");
+}

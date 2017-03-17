@@ -1,0 +1,32 @@
+
+
+.needle-for-pause {
+    transform: rotate(-70deg);
+}
+
+.needle-for-play {
+    transform: rotate(-40deg);
+}
+
+.animation-pause {
+    animation-play-state: paused;
+}
+
+.animation-play {
+    animation-play-state: running;
+}
+
+
+@keyframes rotating {
+    0%, 100% {
+        transform: rotate(36deg);
+    }
+
+    90% {
+        transform: rotate(360deg);
+    }
+
+    90.01% {
+        transform: rotate(0deg);
+    }
+}

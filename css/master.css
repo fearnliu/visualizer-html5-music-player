@@ -1,0 +1,24 @@
+.flex-container {
+    display: flex;
+}
+
+.hover-pointer:hover {
+    cursor: pointer;
+}
+
+.none-display {
+    display: none;
+}
+
+.container {
+    position: relative;
+    max-width: 500px;
+    min-width: 420px;
+    height: 860px;
+    margin: 3em auto;
+    border-radius: 1em;
+
+    background-color: rgb(32, 32, 32);
+
+    font-size: 1rem;
+}

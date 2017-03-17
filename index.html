@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./vendors/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/rotating-animation.css">
+    <link rel="stylesheet" href="./css/front-face.css">
+    <link rel="stylesheet" href="./css/back-face.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="front-face flex-container">
+
+            <div class="needle-device needle-for-pause">
+                <div class="fix-needle"></div>
+                <div class="needle-item"></div>
+            </div>
+
+            <div class="ring outerRing hover-pointer animation-pause" title="点我！！！">
+                <div class="ring innerRing flex-container"></div>
+            </div>
+
+            <div class="progress-bar">
+                <progress class="progress-pilot" value="0" max="100"></progress>
+            </div>
+
+            <div class="control-panel-container flex-container">
+                <span class="control-panel-button hover-pointer back-button" role="button"></span>
+                <span class="control-panel-button hover-pointer play-button" role="button"></span>
+                <span class="control-panel-button hover-pointer next-button" role="button"></span>
+            </div>
+
+        </div>
+
+        <div class="back-face none-display">
+            <canvas id="visualize-area" class=""></canvas>
+        </div>
+
+    </div>
+
+    <script src="./js/handle-audio.js"></script>
+    <script src="./js/visualize-audio.js"></script>
+    <script src="./js/handle-event.js"></script>
+</body>
+
+</html>
